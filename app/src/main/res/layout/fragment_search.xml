@@ -1,0 +1,163 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/steelblue"
+        android:orientation="horizontal">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/dp_7.5"
+            android:text="Cacha~"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_30" />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/et_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/dp_7.5"
+            android:padding="@dimen/dp_7.5"
+            android:background="@color/gray_d9"
+            android:hint="备注:(可选)"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_20" />
+
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_normal"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_marginTop="@dimen/dp_5">
+
+        <ImageView
+            android:id="@+id/img_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/margin_tiny"
+            android:layout_marginBottom="@dimen/margin_tiny"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_login_account" />
+
+        <EditText
+            android:id="@+id/et_order_id"
+            android:layout_width="259dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_tiny"
+            android:layout_toRightOf="@+id/img_order"
+            android:background="@null"
+            android:hint="请输入单号"
+            android:maxLines="1"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/tv_gray_deep"
+            android:textSize="@dimen/text_size_large" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/line_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_50"
+            android:layout_toRightOf="@+id/img_account"
+            android:background="@color/orange_light"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/select_company"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_normal"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginRight="@dimen/margin_large"
+        >
+
+        <ImageView
+            android:id="@+id/img_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/margin_tiny"
+            android:layout_marginBottom="@dimen/margin_tiny"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_login_account" />
+
+        <TextView
+            android:id="@+id/text_company_id"
+            android:layout_width="259dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_tiny"
+            android:layout_toRightOf="@+id/img_company"
+            android:background="@null"
+            android:hint="请选择公司"
+            android:maxLines="1"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/tv_gray_deep"
+            android:textSize="@dimen/text_size_large" />
+
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="25dp"
+            android:layout_alignBottom="@+id/img_company"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="55dp"
+            android:layout_marginBottom="-2dp"
+            android:paddingLeft="12dp"
+            android:src="@mipmap/right" />
+
+        <View
+            android:layout_width="@dimen/dp_220"
+            android:layout_height="@dimen/line_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_50"
+            android:layout_toRightOf="@+id/img_account"
+            android:background="@color/orange_light" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_huge"
+        android:paddingBottom="@dimen/margin_small"
+        android:paddingTop="@dimen/margin_small"
+        android:text="查快递"
+        android:background="@drawable/btn_orange_selector"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_normal"/>
+</LinearLayout>

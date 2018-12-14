@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--Normal Setting-->
+    <header
+        name="常用快递"/>
+    <item
+        android:id="@+id/company_sf"
+        name="顺丰速运"
+        secondaryTxt="95338"/>
+    <item
+        android:id="@+id/company_hkty"
+        name="百世快递"
+        secondaryTxt="Lshare"/>
+    <item
+        android:id="@+id/company_zto"
+        name="中通快递"
+        secondaryTxt="male"/>
+    <item
+        android:id="@+id/company_sto"
+        name="申通快递"
+        secondaryTxt="95555"/>
+    <item
+        android:id="@+id/company_yto"
+        name="圆通快递"
+        secondaryTxt="95599"/>
+    <item
+        android:id="@+id/company_yd"
+        name="韵达快递"
+        secondaryTxt="95699"/>
+    <!--Function Setting-->
+    <!--<header name="Function Setting"/>
+      <item
+          android:id="@+id/update_question"
+          hightLight="true"
+          name="Gift Exchange" />
+    <item
+        android:id="@+id/update_password"
+        hightLight="true"
+        name="Gift Exchange" />
+        />-->
+    <!--Share Setting-->
+    <!--<header name="Share Setting"/>
+    <item
+        android:id="@+id/qq"
+        leftIconRes="R.drawable.ic_qzone"
+        name="QQ"
+        showRightIcon="false"
+        showSwitch="off"
+        />
+    <item
+        android:id="@+id/we_chat"
+        leftIconRes="R.drawable.ic_wechat"
+        name="WeChat"
+        showRightIcon="false"
+        showSwitch="on"
+        />
+    <item
+        android:id="@+id/sina"
+        leftIconRes="R.drawable.ic_sina"
+        name="Sina"
+        showRightIcon="false"
+        showSwitch="on"
+        />-->
+    <!--Other Setting-->
+
+    <!--Other Setting-->
+    <!--<header name="Other Setting"/>
+    <item
+        android:id="@+id/feedback2"
+        name="Feedback"/>
+    <item
+        android:id="@+id/aboutus2"
+        name="About Us"/>
+    <item
+        android:id="@+id/update2"
+        name="Check Update"/>
+    <item
+        android:id="@+id/exit2"
+        name="Exit"/>-->
+</settings>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/steelblue"
+        android:gravity="center"
+        android:text="个人中心"
+        android:textColor="@android:color/white"
+        android:textSize="30dp" />
+
+    <RelativeLayout
+        android:id="@+id/layout_mine_personal"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/steelblue">
+
+        <com.example.view.CircleImageView
+            android:id="@+id/circleimageview_mine_photo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="31dp"
+            android:contentDescription="@null"
+            android:paddingLeft="6dp"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/textview_mine_nickNmae"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/circleimageview_mine_photo"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="昵称:123" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_mine_download"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+
+
+        android:layout_marginTop="16dp"
+        android:background="@color/gray_f2" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="24dp"
+            android:text="账号管理" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="12dp"
+            android:src="@mipmap/right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_mine_setting"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+
+        android:layout_marginTop="4dp"
+        android:background="@color/gray_f2" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="24dp"
+            android:text="设置" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="12dp"
+            android:src="@mipmap/right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_mine_aboutApp"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+
+        android:layout_marginTop="4dp"
+        android:background="@color/gray_f2" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="24dp"
+            android:text="关于软件" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="12dp"
+            android:src="@mipmap/right" />
+    </RelativeLayout>
+
+</LinearLayout>

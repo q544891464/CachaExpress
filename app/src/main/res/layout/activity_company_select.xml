@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jcontact="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical" >
+
+
+
+        <include
+            layout="@layout/jcontact_loading_view"
+            />
+        <com.soubw.jcontactlib.JListView
+            android:id="@+id/lvList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="0.1dp"
+            android:divider="@android:color/black"
+            jcontact:jClearEditTextBg="@drawable/jclearedittext_bg"
+            jcontact:jClearEditTextCloseBg="@drawable/jclearedittext_close_bg"
+            jcontact:jClearEditTextIconBg="@drawable/jclearedittext_icon_bg"
+            jcontact:jClearEditTextNotice="请输入关键字"
+            android:scrollbars="none"/>
+    </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/company_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+</LinearLayout>

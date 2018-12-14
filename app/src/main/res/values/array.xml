@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spingarr">
+        <item>1.你的生日是几月几号？</item>
+        <item>2.你母亲的名字？</item>
+        <item>3.你父亲的名字？</item>
+    </string-array>
+
+</resources>

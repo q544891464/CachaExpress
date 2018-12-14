@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns:android="http://schemas.android.com/apk/res/android">
+  <!--Normal Setting-->
+  <header
+      name="Normal Setting"/>
+  <item
+      android:id="@+id/id"
+      name="ID"
+      secondaryTxt="23333"/>
+  <item
+      android:id="@+id/name"
+      name="Name"
+      secondaryTxt="Lshare"/>
+  <item
+      android:id="@+id/sex"
+      name="Sex"
+      secondaryTxt="male"/>
+  <item
+      android:id="@+id/phone"
+      name="Phone"
+      secondaryTxt="13000000000"/>
+  <item
+      android:id="@+id/registerDate"
+      name="RegisterDate"
+      secondaryTxt="1970-1-1"/>
+  <!--Function Setting-->
+  <!--<header name="Function Setting"/>
+    <item
+        android:id="@+id/update_question"
+        hightLight="true"
+        name="Gift Exchange" />
+  <item
+      android:id="@+id/update_password"
+      hightLight="true"
+      name="Gift Exchange" />
+      />-->
+  <!--Share Setting-->
+  <!--<header name="Share Setting"/>
+  <item
+      android:id="@+id/qq"
+      leftIconRes="R.drawable.ic_qzone"
+      name="QQ"
+      showRightIcon="false"
+      showSwitch="off"
+      />
+  <item
+      android:id="@+id/we_chat"
+      leftIconRes="R.drawable.ic_wechat"
+      name="WeChat"
+      showRightIcon="false"
+      showSwitch="on"
+      />
+  <item
+      android:id="@+id/sina"
+      leftIconRes="R.drawable.ic_sina"
+      name="Sina"
+      showRightIcon="false"
+      showSwitch="on"
+      />-->
+  <!--Other Setting-->
+  <header name="Other Setting"/>
+  <item
+      android:id="@+id/feedback"
+      name="Feedback"/>
+  <item
+      android:id="@+id/aboutus"
+      name="About Us"/>
+  <item
+      android:id="@+id/update"
+      name="Check Update"/>
+  <item
+      android:id="@+id/exit"
+      name="Exit"/>
+  <!--Other Setting-->
+  <!--<header name="Other Setting"/>
+  <item
+      android:id="@+id/feedback2"
+      name="Feedback"/>
+  <item
+      android:id="@+id/aboutus2"
+      name="About Us"/>
+  <item
+      android:id="@+id/update2"
+      name="Check Update"/>
+  <item
+      android:id="@+id/exit2"
+      name="Exit"/>-->
+</settings>

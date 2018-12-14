@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.soubw.jcontactlib.JIndexBarView
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_height="fill_parent" 
+    android:layout_width="10dp"
+    android:background="@drawable/jcontact_rounded_rectangle_shape"
+    android:padding="10dp"
+    />
