@@ -3,25 +3,26 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@drawable/pic_background_01"
     android:orientation="vertical"
-    tools:context="com.example.expressinquiry.RegisterActivity" >
+    android:gravity="center"
+    android:padding="10dp"
+    tools:context="com.cacha.expressinquiry.RegisterActivity" >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:text="用户名 :"
-             />
+
 
         <EditText
             android:id="@+id/et_registerUsername"
+            android:background="@drawable/edittext_bg"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:hint="用户名"
+            android:paddingLeft="@dimen/dp_10"
             android:maxLines="1"
              />
 
@@ -29,45 +30,35 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="10dp" />
+        android:layout_height="20dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:text="密       码："
-             />
 
         <EditText
             android:id="@+id/et_registerpass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLines="1"
+            android:background="@drawable/edittext_bg"
+            android:hint="密码"
             android:inputType="textPassword"
-            android:text="123"
-            />
+            android:maxLines="1"
+            android:paddingLeft="@dimen/dp_10" />
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="10dp" />
+        android:layout_height="20dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:text="确认密码："
-             />
+
 
         <EditText
             android:id="@+id/et_registerpassConfirm"
@@ -75,13 +66,15 @@
             android:layout_height="wrap_content"
             android:maxLines="1"
             android:inputType="textPassword"
-            android:text="123"
+            android:hint="确认密码"
+            android:paddingLeft="@dimen/dp_10"
+            android:background="@drawable/edittext_bg"
              />
     </LinearLayout>
 
     <View
         android:layout_width="fill_parent"
-        android:layout_height="10dp" />
+        android:layout_height="20dp" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -95,13 +88,20 @@
             android:text="手机号码："
              />
 
-        <EditText
+        <TextView
             android:id="@+id/et_registerphonenumber"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/edittext_bg"
+            android:paddingLeft="10dp"
             android:singleLine="true"
              />
     </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -117,14 +117,16 @@
 
         <Spinner
             android:id="@+id/sp_question1"
-            android:background="@color/gray"
+            android:background="@drawable/edittext_bg"
             android:layout_width="match_parent"
+
             android:entries="@array/spingarr"
             android:layout_height="wrap_content"></Spinner>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
+        android:paddingTop="@dimen/dp_10"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
@@ -137,6 +139,8 @@
             android:id="@+id/et_answer1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/edittext_bg"
+            android:paddingLeft="10dp"
             android:singleLine="true"
             />
     </LinearLayout>
@@ -166,10 +170,13 @@
 
         <Button
             android:id="@+id/btn_submit"
-            android:layout_width="103dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
             android:layout_weight="1"
-            android:paddingLeft="10dp"
+            android:background="@drawable/btn_orange_selector"
+            android:textColor="@android:color/white"
             android:text="提交" />
 
 

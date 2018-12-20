@@ -20,7 +20,7 @@
         android:layout_height="180dp"
         android:background="@color/steelblue">
 
-        <com.example.view.CircleImageView
+        <com.cacha.view.CircleImageView
             android:id="@+id/circleimageview_mine_photo"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -43,7 +43,7 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/layout_mine_download"
+        android:id="@+id/layout_mine_account"
         android:layout_width="match_parent"
         android:layout_height="54dp"
 

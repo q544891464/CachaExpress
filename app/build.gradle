@@ -6,82 +6,69 @@ MobSDK {
     appKey "290b6e232671c"
     appSecret "ca6695fa0557097ea836027927069cbc"
     SMSSDK {}
-    ShareSDK {
-        //平台配置信息
-        devInfo {
-            SinaWeibo {
-                appKey "568898243"
-                appSecret "38a4f8204cc784f81f9f0daaf31e02e3"
-                callbackUri "http://www.sharesdk.cn"
-                shareByAppClient true
-            }
-            Wechat {
-                appId "wx4868b35061f87885"
-                appSecret "64020361b8ec4c99936c0e3999a9f249"
-            }
-            QQ {
-                appId "100371282"
-                appKey "aed9b0303e3ed1e27bae87c33761161d"
-                shareByAppClient true
-            }
-        }
-    }
+
 }
 
 
-    android {
-        compileSdkVersion 28
-        defaultConfig {
-            applicationId "com.example.expressinquiry"
-            minSdkVersion 23
-            targetSdkVersion 28
-            versionCode 1
-            versionName "1.0"
-            testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+android {
+    compileSdkVersion 28
 
-
-        }
-        buildTypes {
-            release {
-                minifyEnabled false
-                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-
-            }
-        }
-        compileOptions {
-            sourceCompatibility 1.8
-            targetCompatibility 1.8
-        }
-        lintOptions {
-            abortOnError false
-        }
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
 
     }
+    defaultConfig {
+        applicationId "com.cacha.expressinquiry"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-    dependencies {
-        implementation fileTree(include: ['*.jar'], dir: 'libs')
-        implementation 'com.android.support:appcompat-v7:28.+'
-        implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-        implementation 'com.android.support:support-v4:28.+'
-        testImplementation 'junit:junit:4.12'
-        androidTestImplementation 'com.android.support.test:runner:1.0.1'
-        androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-        implementation files('libs/json-lib-2.4-jdk15.jar')
-        implementation 'com.google.code.gson:gson:2.8.5'
-        implementation 'com.squareup.okhttp3:okhttp:3.11.0'
-        implementation 'com.squareup.okio:okio:2.0.0'
-        implementation 'org.scala-lang:scala-decoder:2.7.1'
-        implementation 'com.github.open-android:FragmentTabhostUtils:0.5.0'
-        implementation 'com.github.d-max:spots-dialog:0.7@aar'
-        implementation 'com.android.support:recyclerview-v7:28.+'
-        implementation 'com.squareup.picasso:picasso:2.5.2'
-        implementation 'com.mylhyl:circleDialog:3.0.0'
-        implementation 'com.android.support:cardview-v7:28.+'
-        debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
-        releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
-        androidTestImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
-        implementation 'com.android.support:design:28.+'
-        implementation 'net.sourceforge.jexcelapi:jxl:2.6.12'
-        implementation 'com.soubw:jcontactlib:0.1.2'
-        implementation 'com.kymjs.rxvolley:rxvolley:1.1.2'
+
     }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.+'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:support-v4:28.+'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation files('libs/json-lib-2.4-jdk15.jar')
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.squareup.okio:okio:2.0.0'
+    implementation 'org.scala-lang:scala-decoder:2.7.1'
+    implementation 'com.github.open-android:FragmentTabhostUtils:0.5.0'
+    implementation 'com.github.d-max:spots-dialog:0.7@aar'
+    implementation 'com.android.support:recyclerview-v7:28.+'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.mylhyl:circleDialog:3.0.0'
+    implementation 'com.android.support:cardview-v7:28.+'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    androidTestImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    implementation 'com.android.support:design:28.+'
+    implementation 'net.sourceforge.jexcelapi:jxl:2.6.12'
+    implementation 'com.soubw:jcontactlib:0.1.2'
+    implementation 'com.kymjs.rxvolley:rxvolley:1.1.2'
+}

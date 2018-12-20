@@ -60,7 +60,7 @@
 
     </android.support.design.widget.TabLayout>
 
-    <com.example.expressinquiry.widget.ClearEditText
+    <com.cacha.expressinquiry.widget.ClearEditText
         android:id="@+id/et_search"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
