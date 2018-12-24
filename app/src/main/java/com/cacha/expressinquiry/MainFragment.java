@@ -42,6 +42,8 @@ import com.cacha.util.ShareUtils;
 import com.cacha.view.CircleImageView;
 import com.mylhyl.circledialog.CircleDialog;
 
+import org.w3c.dom.Text;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -52,6 +54,7 @@ import java.util.Map;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
+import scala.tools.nsc.Main;
 
 import static android.content.ContentValues.TAG;
 
@@ -108,6 +111,7 @@ public class MainFragment extends BaseFragment implements View.OnClickListener,C
     private TextView mtextviewShow;
     private TextView tv_manage;
     private TextView tv_delete;
+    private TextView tv_add;
     private TabLayout tabLayout;
     private Handler handler;
 
@@ -194,6 +198,7 @@ public class MainFragment extends BaseFragment implements View.OnClickListener,C
         tv_manage = (TextView)mView.findViewById((R.id.manage));
         checkBox_all = (CheckBox)mView.findViewById(R.id.checkBox_all);
         tv_delete = (TextView) mView.findViewById(R.id.textviewDetele);
+        tv_add = (TextView) mView.findViewById(R.id.tv_add);
 
 
 
@@ -201,6 +206,7 @@ public class MainFragment extends BaseFragment implements View.OnClickListener,C
 
         tv_manage.setOnClickListener(this);
         tv_delete.setOnClickListener(this);
+        tv_add.setOnClickListener(this);
 
         TextView textviewDetele = (TextView)mView.findViewById(R.id.textviewDetele);
         textviewDetele.setOnClickListener(this);
@@ -412,7 +418,10 @@ public class MainFragment extends BaseFragment implements View.OnClickListener,C
                                         case 1:
                                             Intent textIntent = new Intent(Intent.ACTION_SEND);
                                             textIntent.setType("text/plain");
-                                            textIntent.putExtra(Intent.EXTRA_TEXT, "这是一段分享的文字");
+                                            textIntent.putExtra(Intent.EXTRA_TEXT, "我的订单"+
+                                                    historyList.get(position).getCompanyName()+"的快递"+
+                                                    historyList.get(position).getNumber()+historyList.get(position).getRemark()+historyList.get(position).getStatus()+
+                                            "---来自“Cacha快递查询APP”");
                                             startActivity(Intent.createChooser(textIntent, "分享"));
                                             break;
                                         case 2:
@@ -637,6 +646,10 @@ public class MainFragment extends BaseFragment implements View.OnClickListener,C
                         .configPositive(params -> params.backgroundColorPress = Color.RED)
                         .show(getActivity().getSupportFragmentManager());
                 break;
+            case R.id.tv_add:
+                getActivity().recreate();
+                break;
+
 
 
 

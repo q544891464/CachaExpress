@@ -38,6 +38,11 @@ public class AccountActivity extends BaseActivity implements View.OnClickListene
 
         pLayout = (RelativeLayout)findViewById(R.id.layout_password);
         qLayout = (RelativeLayout)findViewById(R.id.layout_question);
+        findViewById(R.id.back_img).setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                AccountActivity.this.finish();
+            }
+        });
 
         pLayout.setOnClickListener(this);
         qLayout.setOnClickListener(this);

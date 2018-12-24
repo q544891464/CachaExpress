@@ -228,7 +228,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener{
                 break;
            case R.id.layout_mine_aboutApp:
 
-                Intent aIntent = new Intent(context, CompanySelectActivity.class);
+                Intent aIntent = new Intent(context, AboutActivity.class);
                 startActivity(aIntent);
                 break;
             default:
@@ -295,7 +295,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener{
                     //增加弹出动画
                     params.animStyle = R.style.dialogWindowAnim;
                 })
-                .setTitle("选择投降")
+                .setTitle("选择头像")
 //                        .setTitleColor(Color.BLUE)
                 .configTitle(params -> {
 //                                params.backgroundColor = Color.RED;

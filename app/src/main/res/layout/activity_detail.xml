@@ -8,6 +8,47 @@
     android:background="@drawable/pic_background_01"
     tools:context="com.cacha.expressinquiry.DetailActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/steelblue">
+
+        <ImageView
+            android:id="@+id/back_img"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_8"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="快递信息"
+            android:textColor="@color/text_color_60"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_more"
+            android:layout_width="51dp"
+            android:layout_height="37dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="7dp"
+            android:gravity="center"
+            android:text="更多"
+            android:textSize="@dimen/sp_16" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_066"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_d9" />
+    </RelativeLayout>
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"

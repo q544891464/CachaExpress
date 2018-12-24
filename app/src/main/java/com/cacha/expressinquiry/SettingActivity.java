@@ -104,12 +104,16 @@ public class SettingActivity extends BaseActivity
     settingRecyclerAdapter.updateSecondaryText(R.id.id, application.getId()+"");
     settingRecyclerAdapter.updateSecondaryText(R.id.name, application.getUsername()+"");
     settingRecyclerAdapter.updateSecondaryText(R.id.phone, application.getPhonenumber()+"");
-    settingRecyclerAdapter.updateSecondaryText(R.id.sex,application.getSex()+"");
+    if(application.getSex() == null){
+        settingRecyclerAdapter.updateSecondaryText(R.id.sex,"未知");
+    }else{
+        settingRecyclerAdapter.updateSecondaryText(R.id.sex,application.getSex()+"");
+    }
+
     settingRecyclerAdapter.updateSecondaryText(R.id.registerDate,application.getRegisterDate()+"");
   }
 
   @Override public void onItemClick(int id, SettingItem item) {
-    Util.toast(this, item);
    switch (id) {
         case R.id.name:
             new CircleDialog.Builder()
@@ -245,17 +249,26 @@ public class SettingActivity extends BaseActivity
 
        case R.id.feedback:
            //系统邮件系统的动作为android.content.Intent.ACTION_SEND
-           Intent email = new Intent(android.content.Intent.ACTION_SEND);
-           email.setType("text/plain");
+           Intent email = new Intent(Intent.ACTION_SENDTO);
+           email.setData(Uri.parse("mailto:544891464@qq.com"));
 
 //设置邮件默认地址
-           email.putExtra(android.content.Intent.EXTRA_EMAIL, "544891464@qq.com");
+          // email.putExtra(android.content.Intent.EXTRA_EMAIL, "544891464@qq.com");
 //设置邮件默认标题
            email.putExtra(android.content.Intent.EXTRA_SUBJECT, "意见反馈");
 //设置要默认发送的内容
            email.putExtra(android.content.Intent.EXTRA_TEXT, "请写下您宝贵的意见");
 //调用系统的邮件系统
-           startActivity(Intent.createChooser(email, "请选择邮件发送软件"));
+           //startActivity(Intent.createChooser(email, "请选择邮件发送软件"));
+
+           startActivity(email);
+           break;
+
+       case R.id.aboutus:
+           Intent intent1 = new Intent(SettingActivity.this,AboutActivity.class);
+
+           startActivity(intent1);
+
            break;
 
 
@@ -266,6 +279,8 @@ public class SettingActivity extends BaseActivity
            Intent intent = new Intent(SettingActivity.this,LoginActivity.class);
 
            startActivity(intent);
+
+           break;
 
 
    }

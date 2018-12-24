@@ -10,7 +10,7 @@
     <FrameLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:orientation="vertical" >
 
 
@@ -18,23 +18,28 @@
         <include
             layout="@layout/jcontact_loading_view"
             />
+
         <com.soubw.jcontactlib.JListView
             android:id="@+id/lvList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:dividerHeight="0.1dp"
+
             android:divider="@android:color/black"
+            android:dividerHeight="0.1dp"
+            android:scrollbars="none"
             jcontact:jClearEditTextBg="@drawable/jclearedittext_bg"
             jcontact:jClearEditTextCloseBg="@drawable/jclearedittext_close_bg"
             jcontact:jClearEditTextIconBg="@drawable/jclearedittext_icon_bg"
-            jcontact:jClearEditTextNotice="请输入关键字"
-            android:scrollbars="none"/>
+            jcontact:jClearEditTextNotice="请输入关键字" />
     </FrameLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/company_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        />
+        android:layout_height="@dimen/dp_200" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/company_hide"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30" />
 </LinearLayout>

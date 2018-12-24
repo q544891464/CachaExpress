@@ -49,7 +49,8 @@
         <activity android:name=".ForgetPasswordActivity" />
         <activity android:name=".ClipImageActivity" />
         <activity android:name=".QuestionActivity" />
-        <activity android:name=".BaseActivity"></activity>
+        <activity android:name=".BaseActivity" />
+        <activity android:name=".AboutActivity"></activity>
     </application>
 
 </manifest>

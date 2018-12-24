@@ -33,7 +33,10 @@ public class CompanySelectActivity extends BaseActivity implements SettingRecycl
 
     List<MainBean> beans = new ArrayList<>();
     RecyclerView recyclerView;
+    RecyclerView recyclerView_hide;
     SettingRecyclerAdapter settingRecyclerAdapter;
+    SettingRecyclerAdapter settingRecyclerAdapter_hide;
+
 
     InputStream inputStream = null;//输入流
     FileOutputStream outputStream = null;//输出流
@@ -58,6 +61,9 @@ public class CompanySelectActivity extends BaseActivity implements SettingRecycl
 
     private void initView(){
         MyApplication application = (MyApplication)this.getApplication();
+
+
+
         recyclerView = (RecyclerView) findViewById(R.id.company_recycler_view);
         recyclerView.setLayoutManager(
                 new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
@@ -69,6 +75,18 @@ public class CompanySelectActivity extends BaseActivity implements SettingRecycl
 
         List<SettingItem> settingItemList = Util.parseSettings(getResources(), R.xml.company);
         settingRecyclerAdapter.addAll(settingItemList);
+
+        recyclerView_hide = (RecyclerView) findViewById(R.id.company_hide);
+        recyclerView_hide.setLayoutManager(
+                new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        settingRecyclerAdapter_hide = new SettingRecyclerAdapter();
+        recyclerView_hide.setAdapter(settingRecyclerAdapter_hide);
+        recyclerView_hide.addItemDecoration(new PinnedHeaderItemDecoration());
+
+        settingRecyclerAdapter_hide.setOnItemClickListener(this);
+
+        List<SettingItem> settingItemList_hide = Util.parseSettings(getResources(), R.xml.company_hide);
+        settingRecyclerAdapter_hide.addAll(settingItemList_hide);
 
 
         mLoadingView = (ProgressBar) findViewById(R.id.loading_view);
@@ -140,9 +158,18 @@ public class CompanySelectActivity extends BaseActivity implements SettingRecycl
 
     @Override public void onItemClick(int id, SettingItem item) {
         MyApplication application = (MyApplication)this.getApplication();
-        Util.toast(this, item);
+        //Util.toast(this, item);
         switch (id) {
             //TODO:填写id对应的返回值
+
+            case R.id.normal_company_hide:
+                recyclerView.setVisibility(View.VISIBLE);
+                recyclerView_hide.setVisibility(View.GONE);break;
+
+            case R.id.normal_company:
+
+                recyclerView_hide.setVisibility(View.VISIBLE);
+                recyclerView.setVisibility(View.GONE);break;
             case R.id.company_sf:
                 application.setCompanyName("顺丰速运");
                 application.setCompanyCode("SF");
@@ -176,6 +203,36 @@ public class CompanySelectActivity extends BaseActivity implements SettingRecycl
             case R.id.company_zto:
                 application.setCompanyName("中通速运");
                 application.setCompanyCode("ZTO");
+                application.setCompanySelected(true);
+                finish();
+                break;
+            case R.id.company_yzpy:
+                application.setCompanyName("邮政快递包裹");
+                application.setCompanyCode("YZPY");
+                application.setCompanySelected(true);
+                finish();
+                break;
+            case R.id.company_ems:
+                application.setCompanyName("EMS");
+                application.setCompanyCode("EMS");
+                application.setCompanySelected(true);
+                finish();
+                break;
+            case R.id.company_hhtt:
+                application.setCompanyName("天天快递");
+                application.setCompanyCode("HHTT");
+                application.setCompanySelected(true);
+                finish();
+                break;
+            case R.id.company_jd:
+                application.setCompanyName("京东快递");
+                application.setCompanyCode("JD");
+                application.setCompanySelected(true);
+                finish();
+                break;
+            case R.id.company_zjs:
+                application.setCompanyName("宅急送");
+                application.setCompanyCode("ZJS");
                 application.setCompanySelected(true);
                 finish();
                 break;

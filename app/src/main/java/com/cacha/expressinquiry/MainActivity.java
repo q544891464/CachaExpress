@@ -39,7 +39,7 @@ public class MainActivity extends FragmentActivity implements MineFragment.OnFra
         tabViewChildList.add(tabViewChild03);
 
         //end add data
-        tabView.setTabViewDefaultPosition(2);
+        tabView.setTabViewDefaultPosition(1);
         tabView.setTabViewChild(tabViewChildList,getSupportFragmentManager());
         tabView.setOnTabChildClickListener(new TabView.OnTabChildClickListener() {
             @Override
@@ -47,6 +47,7 @@ public class MainActivity extends FragmentActivity implements MineFragment.OnFra
                 // Toast.makeText(getApplicationContext(),"position:"+position,Toast.LENGTH_SHORT).show();
             }
         });
+
 
 
 

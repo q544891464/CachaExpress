@@ -2,31 +2,52 @@
 <settings xmlns:android="http://schemas.android.com/apk/res/android">
     <!--Normal Setting-->
     <header
+        android:id="@+id/normal_company"
         name="常用快递"/>
     <item
         android:id="@+id/company_sf"
-        name="顺丰速运"
+        name="顺丰速运（暂不支持）"
         secondaryTxt="95338"/>
     <item
         android:id="@+id/company_hkty"
         name="百世快递"
-        secondaryTxt="Lshare"/>
+        secondaryTxt="95320"/>
     <item
         android:id="@+id/company_zto"
         name="中通快递"
-        secondaryTxt="male"/>
+        secondaryTxt="95311"/>
     <item
         android:id="@+id/company_sto"
         name="申通快递"
-        secondaryTxt="95555"/>
+        secondaryTxt="95543"/>
     <item
         android:id="@+id/company_yto"
         name="圆通快递"
-        secondaryTxt="95599"/>
+        secondaryTxt="95554"/>
     <item
         android:id="@+id/company_yd"
         name="韵达快递"
-        secondaryTxt="95699"/>
+        secondaryTxt="95546"/>
+    <item
+        android:id="@+id/company_yzpy"
+        name="邮政快递包裹"
+        secondaryTxt="11183"/>
+    <item
+        android:id="@+id/company_ems"
+        name="EMS"
+        secondaryTxt="11183"/>
+    <item
+        android:id="@+id/company_hhtt"
+        name="天天快递"
+        secondaryTxt="400-188-8888"/>
+    <item
+        android:id="@+id/company_jd"
+        name="京东快递"
+        secondaryTxt="950616"/>
+    <item
+        android:id="@+id/company_zjs"
+        name="宅急送"
+        secondaryTxt="400-6789-000"/>
     <!--Function Setting-->
     <!--<header name="Function Setting"/>
       <item

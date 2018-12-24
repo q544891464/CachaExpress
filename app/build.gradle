@@ -71,4 +71,5 @@ dependencies {
     implementation 'net.sourceforge.jexcelapi:jxl:2.6.12'
     implementation 'com.soubw:jcontactlib:0.1.2'
     implementation 'com.kymjs.rxvolley:rxvolley:1.1.2'
+    implementation 'com.github.medyo:android-about-page:1.2'
 }

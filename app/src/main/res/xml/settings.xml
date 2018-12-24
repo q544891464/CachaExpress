@@ -2,26 +2,26 @@
 <settings xmlns:android="http://schemas.android.com/apk/res/android">
   <!--Normal Setting-->
   <header
-      name="Normal Setting"/>
+      name="个人设定"/>
   <item
       android:id="@+id/id"
-      name="ID"
+      name="用户ID"
       secondaryTxt="23333"/>
   <item
       android:id="@+id/name"
-      name="Name"
+      name="用户名"
       secondaryTxt="Lshare"/>
   <item
       android:id="@+id/sex"
-      name="Sex"
+      name="性别"
       secondaryTxt="male"/>
   <item
       android:id="@+id/phone"
-      name="Phone"
+      name="手机号"
       secondaryTxt="13000000000"/>
   <item
       android:id="@+id/registerDate"
-      name="RegisterDate"
+      name="注册日期"
       secondaryTxt="1970-1-1"/>
   <!--Function Setting-->
   <!--<header name="Function Setting"/>
@@ -58,19 +58,16 @@
       showSwitch="on"
       />-->
   <!--Other Setting-->
-  <header name="Other Setting"/>
+  <header name="其它设定"/>
   <item
       android:id="@+id/feedback"
-      name="Feedback"/>
+      name="问题反馈"/>
   <item
       android:id="@+id/aboutus"
-      name="About Us"/>
-  <item
-      android:id="@+id/update"
-      name="Check Update"/>
+      name="关于我们"/>
   <item
       android:id="@+id/exit"
-      name="Exit"/>
+      name="注销"/>
   <!--Other Setting-->
   <!--<header name="Other Setting"/>
   <item

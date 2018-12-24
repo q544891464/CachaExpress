@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cacha.util.HttpUtils;
 
@@ -199,6 +200,16 @@ public class SearchFragment extends BaseFragment implements View.OnClickListener
 
                 Log.i("ShipperCode", ShipperCode);
                 Log.i("LogisticCode",LogisticCode);
+
+                if (et_order.getText().toString().isEmpty()){
+                    Toast.makeText(getActivity(),"你输入的订单号为空!",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (txt_company.getText().toString().isEmpty()){
+                    Toast.makeText(getActivity(),"您未选择快递公司！",Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 try {
                     searchPost(api.getReqURL(),api.getParams(ShipperCode,LogisticCode));

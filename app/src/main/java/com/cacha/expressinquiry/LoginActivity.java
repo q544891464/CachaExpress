@@ -627,7 +627,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                     application.setPassword(m_result.getPassword());
                                     application.setPhonenumber(m_result.getPhonenumber());
                                     application.setSex(m_result.getSex());
-                                    application.setRegisterDate(m_result.getRegisterDate());break;//登录成功
+                                    application.setRegisterDate(m_result.getRegisterDate());
+                                    application.setIcon(m_result.getIcon());break;//登录成功
                                 case "-2":msg.what = 456;//密码错误
                                     break;
                                 case "-1":msg.what = 789;//用户不存在
@@ -757,7 +758,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                     application.setPassword(m_result.getPassword());
                                     application.setPhonenumber(m_result.getPhonenumber());
                                     application.setSex(m_result.getSex());
-                                    application.setRegisterDate(m_result.getRegisterDate());msg.obj = m_result; //把登录结果也发送过去break;//登录成功
+                                    application.setRegisterDate(m_result.getRegisterDate());
+                                    application.setIcon(m_result.getIcon());msg.obj = m_result; //把登录结果也发送过去break;//登录成功
+
+                                    break;
                                 case "-2":msg.what = 444;//密码错误
                                     break;
                                 case "-1":msg.what = 555;//用户不存在
